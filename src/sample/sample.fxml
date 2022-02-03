@@ -1,8 +1,24 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane alignment="BOTTOM_CENTER" rowValignment="TOP" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+   <children>
+      <Group>
+         <children>
+            <Canvas fx:id="Canvasic" height="300.0" width="580.0" />
+         </children>
+         <FlowPane.margin>
+            <Insets />
+         </FlowPane.margin>
+      </Group>
+      <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onCircle" text="Круг">
+         <FlowPane.margin>
+            <Insets top="50.0" />
+         </FlowPane.margin></Button>
+   </children>
+</FlowPane>
