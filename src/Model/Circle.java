@@ -14,14 +14,13 @@ public class Circle extends Shape{
     @Override
 
     double area() {
-        return radius*Math.pow(Math.PI,2);
+        return Math.pow(radius,2)*Math.PI;
     }
 
     @Override
 
     public String toString() {
-
-        return "Rectangle color is " + super.color +  "and area is : " + area();   }
+        return "Circle color is " + super.color +  "and area is : " + area();   }
 
     @Override
     public void draw(GraphicsContext gr) {

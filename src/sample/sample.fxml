@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<FlowPane alignment="BOTTOM_CENTER" rowValignment="TOP" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+<FlowPane alignment="BOTTOM_LEFT" rowValignment="TOP" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
    <children>
       <Group>
          <children>
@@ -16,9 +16,28 @@
             <Insets />
          </FlowPane.margin>
       </Group>
-      <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onCircle" text="Круг">
+      <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#onCircle" text="Круг">
          <FlowPane.margin>
-            <Insets top="50.0" />
+            <Insets bottom="10.0" left="10.0" right="10.0" />
          </FlowPane.margin></Button>
+      <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#onEllipse" text="Эллипс">
+         <FlowPane.margin>
+            <Insets right="10.0" />
+         </FlowPane.margin></Button>
+      <Button mnemonicParsing="false" onAction="#onRentagle" text="Прямоугольник">
+         <FlowPane.margin>
+            <Insets right="10.0" />
+         </FlowPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#onRoundRent" text="RoundRect">
+         <FlowPane.margin>
+            <Insets right="10.0" />
+         </FlowPane.margin></Button>
+      <Button mnemonicParsing="false" text="Квадрат">
+         <FlowPane.margin>
+            <Insets right="10.0" />
+         </FlowPane.margin>
+      </Button>
+      <ColorPicker fx:id="ColorShape" />
    </children>
 </FlowPane>
