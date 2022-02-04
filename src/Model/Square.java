@@ -6,11 +6,10 @@ import javafx.scene.paint.Color;
 public class Square extends Shape{
     double side;
 
-    public Square(Color color, double side) {
+    public Square(Color color, double side,Color ColorOutline) {
         // calling Shape constructor
-        super(color);
+        super(color, ColorOutline);
         this.side = side;
-
     }
     @Override
 
@@ -26,6 +25,9 @@ public class Square extends Shape{
     @Override
     public void draw(GraphicsContext gr) {
         gr.setFill(this.color);
+        gr.setLineWidth(5);
+        gr.setStroke(this.ColorOutline);
         gr.fillRect(200, 100, side, side);
+        gr.strokeRect(200, 100, side, side);
     }
 }

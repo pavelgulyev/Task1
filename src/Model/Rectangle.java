@@ -6,9 +6,9 @@ import javafx.scene.paint.Color;
 public class Rectangle extends Shape{
     double width, height;
 
-    public Rectangle(Color color, double width, double height) {
+    public Rectangle(Color color, double width, double height,Color ColorOutline) {
         // calling Shape constructor
-        super(color);
+        super(color, ColorOutline);
         this.width = width;
         this.height = height;
     }
@@ -26,6 +26,9 @@ public class Rectangle extends Shape{
     @Override
     public void draw(GraphicsContext gr) {
         gr.setFill(this.color);
+        gr.setLineWidth(5);
+        gr.setStroke(this.ColorOutline);
         gr.fillRect(200, 100, width, height);
+        gr.strokeRect(200, 100, width, height);
     }
 }

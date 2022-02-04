@@ -5,7 +5,7 @@ abstract class Shape {
     //параметры фигуры - приватные поля
 
     Color color;
-
+    Color ColorOutline;
     // объявление абстрактных методов
 
     abstract double area();
@@ -16,18 +16,20 @@ abstract class Shape {
 
     // конструктор
 
-    public Shape(Color color) {
+    public Shape(Color color, Color ColorOutline) {
 
         System.out.println("Shape constructor called");
-
-        this.color = color;     }
+        this.ColorOutline = ColorOutline;
+        this.color = color;
+    }
 
 
 
     // реализация методов
 
-    public void setColor(Color color) {
-
-        this.color=color;     }
+    public void setColor(Color color, Color ColorOutline) {
+        this.ColorOutline = ColorOutline;
+        this.color=color;
+    }
 }
 
