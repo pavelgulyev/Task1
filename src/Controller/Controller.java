@@ -44,8 +44,11 @@ public class Controller {
     }
 
     public void onSquare(ActionEvent actionEvent) {
-        Square square = new Square(ColorShape.getValue(), 100, ColorOutline.getValue());
+        /*Square square = new Square(ColorShape.getValue(), 100, ColorOutline.getValue());*/
+        Poligon poligon = new Poligon(ColorShape.getValue(), 100,200, ColorOutline.getValue());
         clear();
-        square.draw(Canvasic.getGraphicsContext2D());
+        poligon.draw(Canvasic.getGraphicsContext2D());
+        /*square.draw(Canvasic.getGraphicsContext2D());*/
     }
+
 }
