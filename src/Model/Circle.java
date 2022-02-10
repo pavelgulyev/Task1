@@ -23,12 +23,14 @@ public class Circle extends Shape{
         return "Circle color is " + super.color +  "and area is : " + area();   }
 
     @Override
-    public void draw(GraphicsContext gr) {
+    public void draw(GraphicsContext gr, double x, double y) {
+        double centerX = x-radius/2;
+        double centerY = y-radius/2;
         gr.setFill(this.color);
         gr.setLineWidth(5);
         gr.setStroke(this.ColorOutline);
-        gr.fillOval(100, 100, radius, radius);
-        gr.strokeOval(100, 100, radius, radius);
+        gr.fillOval(centerX, centerY, radius, radius);
+        gr.strokeOval(centerX, centerY, radius, radius);
     }
 
 }

@@ -12,7 +12,7 @@ abstract class Shape {
 
     public abstract String toString();
 
-    abstract void draw( GraphicsContext gr);
+    abstract void draw( GraphicsContext gr, double x, double y);
 
     // конструктор
 

@@ -24,11 +24,13 @@ public class Rectangle extends Shape{
         return "Rectangle color is " + super.color +  "and area is : " + area();   }
 
     @Override
-    public void draw(GraphicsContext gr) {
+    public void draw(GraphicsContext gr, double x, double y) {
         gr.setFill(this.color);
         gr.setLineWidth(5);
+        double centerX = x-width/2;
+        double centerY = y-height/2;
         gr.setStroke(this.ColorOutline);
-        gr.fillRect(200, 100, width, height);
-        gr.strokeRect(200, 100, width, height);
+        gr.fillRect(centerX, centerY, width, height);
+        gr.strokeRect(centerX, centerY, width, height);
     }
 }

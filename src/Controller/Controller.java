@@ -17,38 +17,49 @@ public class Controller {
     @FXML
     private ColorPicker ColorOutline;
 
+    private double x,y;
+    public void click(MouseEvent mouseEvent) {
+        Rectangle ren = new Rectangle(ColorShape.getValue(), 100, 50,ColorOutline.getValue());
+        clear();
+        ren.draw(Canvasic.getGraphicsContext2D(),mouseEvent.getX(),mouseEvent.getY());
+        x=mouseEvent.getX();
+        y=mouseEvent.getY();
+        System.out.println("x="+x+" y="+y);
+    }
     private void clear(){
         Canvasic.getGraphicsContext2D().clearRect(0, 0, Canvasic.getWidth(), Canvasic.getHeight());
     }
     public void onCircle(ActionEvent actionEvent) {
         Circle circle = new Circle(ColorShape.getValue(), 100, ColorOutline.getValue());
         clear();
-        circle.draw(Canvasic.getGraphicsContext2D());
+        circle.draw(Canvasic.getGraphicsContext2D(),x,y);
     }
 
     public void onEllipse(ActionEvent actionEvent) {
         Ellipse ell = new Ellipse(ColorShape.getValue(), 100,50, ColorOutline.getValue());
         clear();
-        ell.draw(Canvasic.getGraphicsContext2D());
+        ell.draw(Canvasic.getGraphicsContext2D(),x,y);
     }
 
     public void onRentagle(ActionEvent actionEvent) {
         Rectangle ren = new Rectangle(ColorShape.getValue(), 100,50, ColorOutline.getValue());
         clear();
-        ren.draw(Canvasic.getGraphicsContext2D());
+        ren.draw(Canvasic.getGraphicsContext2D(),1,2);
     }
     public void onRoundRent(ActionEvent actionEvent) {
         RoundRectangle roundren = new RoundRectangle(ColorShape.getValue(), 100,50, 30, ColorOutline.getValue());
         clear();
-        roundren.draw(Canvasic.getGraphicsContext2D());
+        roundren.draw(Canvasic.getGraphicsContext2D(),1,2);
     }
 
     public void onSquare(ActionEvent actionEvent) {
         /*Square square = new Square(ColorShape.getValue(), 100, ColorOutline.getValue());*/
         Poligon poligon = new Poligon(ColorShape.getValue(), 100,200, ColorOutline.getValue());
         clear();
-        poligon.draw(Canvasic.getGraphicsContext2D());
+        poligon.draw(Canvasic.getGraphicsContext2D(),1,2);
         /*square.draw(Canvasic.getGraphicsContext2D());*/
     }
+
+
 
 }

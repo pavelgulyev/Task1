@@ -28,13 +28,16 @@ public class Poligon extends Shape{
         return "Circle color is " + super.color +  "and area is : " + area();   }
 
     @Override
-    public void draw(GraphicsContext gc) {
+    public void draw(GraphicsContext gc, double x, double y) {
+        double width2,heigh5;
+        width2=width/2;
+        heigh5=height/5;
         // Start the Path
         gc.setFill(this.color);
         gc.setLineWidth(5);
         gc.setStroke(this.ColorOutline);
-        gc.beginPath();
-        // Make different Paths
+
+        gc.beginPath();// Make different Paths
 
         gc.moveTo(10, 10);
         gc.lineTo(10, height+10);
@@ -47,20 +50,19 @@ public class Poligon extends Shape{
 
         gc.moveTo(width+10, 10);
         gc.lineTo(10, 10);
+        for (int i=1; i<=5; i++){
+            gc.moveTo(10, heigh5*i+10);
+            gc.lineTo(width+10, heigh5*i+10);
+        }
+        for (int i=1; i<=5; i++){
+            gc.moveTo(width2+10, 10);
+        gc.lineTo(width2+10, heigh5*i+10);
+        }
 
 
-       /* for (int i=0; i<6; i++){
-            for(int j=0;j<height; )
-            gc.moveTo(10, h1_5*i);
-            gc.lineTo(10, h1_5*i);
-//            if(i%2==0){
-//                gc.moveTo(10, h1_5*i);
-//                gc.lineTo(10, h1_5*i);
-//            }
-//            else{
-//                gc.moveTo(10, h1_5*i);
-//                gc.lineTo(10, h1_5*i);
-//            }*/
+        // End the Path
+        gc.stroke();
+        gc.closePath();
 
     }
 }

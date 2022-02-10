@@ -23,7 +23,7 @@ public class Square extends Shape{
         return "Rectangle color is " + super.color +  "and area is : " + area();   }
 
     @Override
-    public void draw(GraphicsContext gr) {
+    public void draw(GraphicsContext gr, double x, double y) {
         gr.setFill(this.color);
         gr.setLineWidth(5);
         gr.setStroke(this.ColorOutline);

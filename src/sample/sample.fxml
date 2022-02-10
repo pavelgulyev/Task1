@@ -11,7 +11,7 @@
    <children>
       <Group>
          <children>
-            <Canvas fx:id="Canvasic" height="300.0" width="580.0" />
+            <Canvas fx:id="Canvasic" height="300.0" onMouseClicked="#click" width="580.0" />
          </children>
          <FlowPane.margin>
             <Insets />
