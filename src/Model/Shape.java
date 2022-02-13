@@ -17,7 +17,6 @@ abstract class Shape {
     // конструктор
 
     public Shape(Color color, Color ColorOutline) {
-
         System.out.println("Shape constructor called");
         this.ColorOutline = ColorOutline;
         this.color = color;

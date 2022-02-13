@@ -19,7 +19,7 @@ public class Controller {
 
     private double x,y;
     public void click(MouseEvent mouseEvent) {
-        Rectangle ren = new Rectangle(ColorShape.getValue(), 100, 50,ColorOutline.getValue());
+        Circle ren = new Circle(ColorShape.getValue(), 100, ColorOutline.getValue());
         clear();
         ren.draw(Canvasic.getGraphicsContext2D(),mouseEvent.getX(),mouseEvent.getY());
         x=mouseEvent.getX();
